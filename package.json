@@ -1,0 +1,29 @@
+{
+  "name": "glance",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @glance/web",
+    "build": "npm run build -w @glance/web",
+    "typecheck": "npm run typecheck -w @glance/web",
+    "lint": "eslint .",
+    "test": "bash scripts/test-android.sh",
+    "android:sync": "npm run build && npm run sync --prefix apps/android",
+    "android:debug": "npm run android:sync && cd apps/android/android && ./gradlew assembleDebug",
+    "android:release": "bash scripts/build-android-release.sh",
+    "android:ota": "bash scripts/android-ota.sh"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1"
+  },
+  "license": "UNLICENSED"
+}

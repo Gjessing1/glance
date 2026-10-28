@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The agenda carousel's dots under the events; a tap pages forward, wrapping at the end. The arrows are in the title row. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/pager_dots" android:layout_width="match_parent" android:layout_height="16dp" android:gravity="center" android:orientation="horizontal" />

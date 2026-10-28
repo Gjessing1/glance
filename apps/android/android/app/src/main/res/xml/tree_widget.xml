@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Living Tree: one column wide, five rows tall; it redraws to any size it is resized to. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="40dp" android:minHeight="320dp" android:targetCellWidth="1" android:targetCellHeight="5"
+    android:minResizeWidth="40dp" android:minResizeHeight="180dp"
+    android:resizeMode="horizontal|vertical" android:updatePeriodMillis="0"
+    android:initialLayout="@layout/widget_tree" android:previewImage="@drawable/tree_preview"
+    android:widgetCategory="home_screen" android:description="@string/tree_widget_description" />

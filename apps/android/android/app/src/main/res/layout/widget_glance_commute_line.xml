@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The commute outside its window: one line, the next departure and where it gets you. The ticket fills the row's
+     height and right padding, so it is easy to hit. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/commute_line" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:clipToPadding="false" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="9dp" android:paddingBottom="9dp" android:background="@drawable/group_background">
+    <LinearLayout android:id="@+id/line_badge" android:layout_width="wrap_content" android:layout_height="22dp" android:minWidth="40dp" android:gravity="center" android:orientation="horizontal" android:paddingLeft="5dp" android:paddingRight="7dp" android:background="@drawable/badge_bus">
+        <ImageView android:id="@+id/mode_icon" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_bus" android:importantForAccessibility="no" />
+        <TextView android:id="@+id/line_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="3dp" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="12sp" android:maxLines="1" />
+    </LinearLayout>
+    <TextView android:id="@+id/line_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:fontFeatureSettings="tnum" android:fontFamily="sans-serif-medium" android:textSize="16sp" android:textColor="@color/glance_ink" android:maxLines="1" />
+    <TextView android:id="@+id/line_countdown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:textSize="12sp" android:textColor="@color/glance_ink" android:maxLines="1" />
+    <TextView android:id="@+id/line_dest" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:gravity="end" android:textSize="12sp" android:textColor="@color/glance_muted" android:maxLines="1" android:ellipsize="end" />
+    <ImageView android:id="@+id/line_ticket" android:layout_width="56dp" android:layout_height="40dp" android:layout_marginTop="-9dp" android:layout_marginBottom="-9dp" android:layout_marginStart="-6dp" android:layout_marginEnd="-12dp" android:paddingLeft="22dp" android:paddingRight="10dp" android:paddingTop="8dp" android:paddingBottom="8dp" android:src="@drawable/ic_ticket" android:contentDescription="Ticket in Entur" android:visibility="gone" />
+</LinearLayout>

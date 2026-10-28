@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget palette. values-night redefines every entry; badges keep their operator colours in both. -->
+<resources>
+    <color name="glance_widget_bg">#F2F2F7</color>
+    <color name="glance_card">#FFFFFF</color>
+    <color name="glance_future_event">#F4F6FA</color>
+    <color name="glance_ink">#181C56</color>
+    <color name="glance_muted">#6B6F8F</color>
+    <color name="glance_divider">#ECEEF4</color>
+    <color name="glance_late">#D31F2A</color>
+    <color name="glance_warn">#B06000</color>
+    <color name="glance_ok">#1C8054</color>
+    <color name="glance_tracked">#E8EEF9</color>
+    <color name="glance_chip_selected">#181C56</color>
+    <color name="glance_on_chip_selected">#FFFFFF</color>
+    <color name="glance_soft">#E9EAF2</color>
+    <color name="glance_link">#3550C4</color>
+</resources>

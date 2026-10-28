@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><resources>
+<string name="app_name">Glance</string><string name="title_activity_main">Glance</string>
+<string name="package_name">io.gjessing.glance</string><string name="custom_url_scheme">io.gjessing.glance</string>
+<string name="departure_widget_description">Departure boards for your journeys</string><string name="commute_widget_description">Whole journeys for one commute, both ways</string>
+<string name="smart_widget_description">Commute, agenda and weather: what matters now and next</string><string name="agenda_widget_description">Your next events from Nodecal</string><string name="weather_widget_description">Rain advice for your commute</string><string name="tree_widget_description">A weeping birch that follows the weather, light and seasons at home</string><string name="world_widget_description">A tiny world by a mountain lake that lives with the weather, light and seasons at home</string>
+</resources>

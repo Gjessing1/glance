@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A quiet line in a section: "Nothing scheduled", "No commute today", a hint to finish setup. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="6dp">
+    <TextView android:id="@+id/note_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/glance_ink" android:maxLines="1" android:ellipsize="end" />
+    <TextView android:id="@+id/note_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:textColor="@color/glance_muted" android:maxLines="1" android:ellipsize="end" android:visibility="gone" />
+</LinearLayout>

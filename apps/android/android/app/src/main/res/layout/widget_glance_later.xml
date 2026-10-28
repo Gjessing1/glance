@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The connections after the next one: "Later", then a line chip and its time for each, so the row reads as departures
+     rather than a run of numbers. As tall as the status line it replaced. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/later_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:gravity="center_vertical" android:orientation="horizontal">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="6dp" android:text="Later" android:textSize="12sp" android:textColor="@color/glance_muted" android:maxLines="1" />
+    <LinearLayout android:id="@+id/later_items" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" />
+</LinearLayout>

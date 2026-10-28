@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Living Tree and Tiny Living World with motion: A, B, then A again. Each frame fades in over the one before and the one
+  leaving holds still underneath, so the picture never thins out mid-fade, and the step from the
+  second A back to the first is invisible.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tree_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper android:layout_width="match_parent" android:layout_height="match_parent" android:autoStart="true" android:flipInterval="9000"
+        android:inAnimation="@anim/tree_fade_in" android:outAnimation="@anim/tree_hold">
+        <ImageView android:id="@+id/tree_frame_a" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+        <ImageView android:id="@+id/tree_frame_b" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+        <ImageView android:id="@+id/tree_frame_c" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+    </ViewFlipper>
+</FrameLayout>

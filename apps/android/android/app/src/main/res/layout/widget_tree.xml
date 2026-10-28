@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Living Tree and Tiny Living World, still: one painted frame, corners already rounded in the picture. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tree_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/tree_frame_a" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+</FrameLayout>

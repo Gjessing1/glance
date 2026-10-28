@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The planned minutes at the change; coloured when live times make it tight (amber) or break it (red ×). -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/change_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30dp" android:gravity="center" android:paddingLeft="4dp" android:paddingRight="4dp" android:textSize="11sp" android:textColor="@color/glance_muted" android:maxLines="1" />

@@ -1,0 +1,8 @@
+{
+  "appId": "io.gjessing.glance",
+  "appName": "Glance",
+  "webDir": "../web/dist",
+  "android": {
+    "allowMixedContent": false
+  }
+}

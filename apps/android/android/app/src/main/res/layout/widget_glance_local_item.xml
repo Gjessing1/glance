@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One local bus in Smart Glance: widget_departure_compact pressed tighter (shorter badge, no font padding) so two
+     directions and the card's title row fit beside the agenda. Same ids, so DepartureWidget.departureItem fills it. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/departure_item" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="4dp" android:orientation="vertical">
+    <LinearLayout android:id="@+id/line_badge" android:layout_width="wrap_content" android:layout_height="20dp" android:minWidth="34dp" android:gravity="center" android:orientation="horizontal" android:paddingLeft="5dp" android:paddingRight="5dp" android:background="@drawable/badge_bus">
+        <ImageView android:id="@+id/mode_icon" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" android:importantForAccessibility="no" />
+        <TextView android:id="@+id/line_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="12sp" android:maxLines="1" />
+    </LinearLayout>
+    <TextView android:id="@+id/departure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="1dp" android:paddingStart="1dp" android:includeFontPadding="false" android:fontFamily="sans-serif-medium" android:textSize="14sp" android:textColor="@color/glance_ink" />
+    <TextView android:id="@+id/departure_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="1dp" android:includeFontPadding="false" android:textSize="10sp" android:textColor="@color/glance_muted" android:maxLines="1" android:visibility="gone" />
+</LinearLayout>

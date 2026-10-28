@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Narrow column used when the chosen number of departures does not fit at full size. Columns share the row equally, so a wide badge like RE10 does not shift its neighbours. The badge colour already tells bus from rail, so the mode icon is dropped. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/departure_item" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="4dp" android:orientation="vertical">
+    <LinearLayout android:id="@+id/line_badge" android:layout_width="wrap_content" android:layout_height="26dp" android:minWidth="36dp" android:gravity="center" android:orientation="horizontal" android:paddingLeft="5dp" android:paddingRight="5dp" android:background="@drawable/badge_bus">
+        <ImageView android:id="@+id/mode_icon" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" android:importantForAccessibility="no" />
+        <TextView android:id="@+id/line_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="13sp" android:maxLines="1" />
+    </LinearLayout>
+    <TextView android:id="@+id/departure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="2dp" android:paddingStart="1dp" android:fontFamily="sans-serif-medium" android:textSize="15sp" android:textColor="@color/glance_ink" />
+    <TextView android:id="@+id/departure_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="1dp" android:textSize="10sp" android:textColor="@color/glance_muted" android:maxLines="1" android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="glance_widget_bg">#1B1C24</color>
+    <color name="glance_card">#272934</color>
+    <color name="glance_future_event">#2E313F</color>
+    <color name="glance_ink">#ECEDF7</color>
+    <color name="glance_muted">#A2A5BF</color>
+    <color name="glance_divider">#363846</color>
+    <color name="glance_late">#FF7070</color>
+    <color name="glance_warn">#F2A65A</color>
+    <color name="glance_ok">#5FCB8F</color>
+    <color name="glance_tracked">#323C55</color>
+    <color name="glance_chip_selected">#ECEDF7</color>
+    <color name="glance_on_chip_selected">#181C56</color>
+    <color name="glance_soft">#343645</color>
+    <color name="glance_link">#A8B6FF</color>
+</resources>

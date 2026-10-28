@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Agenda taps open Nodecal's own app when it is installed. -->
+    <!-- The commute's ticket button opens Entur, or its Play Store page when Entur is missing. -->
+    <queries><package android:name="io.gjessing.nodecal" /><package android:name="no.entur" /></queries>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation|density" android:exported="true" android:launchMode="singleTask" android:theme="@style/AppTheme.NoActionBarLaunch">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity>
+        <activity android:name=".JourneyActivity" android:exported="false" android:theme="@style/JourneySheet" android:taskAffinity="io.gjessing.glance.journey" android:launchMode="singleTask" android:excludeFromRecents="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
+        <activity android:name=".WorldActivity" android:exported="false" android:theme="@style/JourneySheet" android:taskAffinity="io.gjessing.glance.world" android:launchMode="singleTask" android:excludeFromRecents="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
+        <activity android:name=".TreeActivity" android:exported="false" android:theme="@style/JourneySheet" android:taskAffinity="io.gjessing.glance.tree" android:launchMode="singleTask" android:excludeFromRecents="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
+        <activity android:name=".AllDayActivity" android:exported="false" android:theme="@style/JourneySheet" android:taskAffinity="io.gjessing.glance.allday" android:launchMode="singleTask" android:excludeFromRecents="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
+        <receiver android:name=".DepartureWidget" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/departure_widget"/>
+        </receiver>
+        <receiver android:name=".CommuteWidget" android:exported="true" android:label="Glance commute">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/commute_widget"/>
+        </receiver>
+        <receiver android:name=".SmartWidget" android:exported="true" android:label="Smart Glance">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/smart_widget"/>
+        </receiver>
+        <receiver android:name=".AgendaWidget" android:exported="true" android:label="Glance agenda">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/agenda_widget"/>
+        </receiver>
+        <receiver android:name=".WeatherWidget" android:exported="true" android:label="Glance weather">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/weather_widget"/>
+        </receiver>
+        <receiver android:name=".TreeWidget" android:exported="true" android:label="Living Tree">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/tree_widget"/>
+        </receiver>
+        <receiver android:name=".WorldWidget" android:exported="true" android:label="Tiny Living World">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/world_widget"/>
+        </receiver>
+        <!-- Re-renders at countdown steps and window edges; re-armed after boot, updates and clock changes. -->
+        <receiver android:name=".BoundaryReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

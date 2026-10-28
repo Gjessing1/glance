@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tiny Living World in one cell with motion: widget_tree_animated, its square picture centred like widget_world. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tree_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper android:layout_width="match_parent" android:layout_height="match_parent" android:autoStart="true" android:flipInterval="9000"
+        android:inAnimation="@anim/tree_fade_in" android:outAnimation="@anim/tree_hold">
+        <ImageView android:id="@+id/tree_frame_a" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:importantForAccessibility="no" />
+        <ImageView android:id="@+id/tree_frame_b" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:importantForAccessibility="no" />
+        <ImageView android:id="@+id/tree_frame_c" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:importantForAccessibility="no" />
+    </ViewFlipper>
+</FrameLayout>

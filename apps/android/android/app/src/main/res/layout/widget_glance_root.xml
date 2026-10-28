@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The combined Glance widget: a header with the date, then the sections as cards. The card hugs its sections, so a cell
+     taller than they need shows home screen below it instead of an empty band inside the widget. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="top" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="6dp" android:paddingBottom="10dp" android:background="@drawable/widget_background">
+        <LinearLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="28dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="6dp" android:paddingEnd="4dp">
+            <TextView android:id="@+id/header_label" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textColor="@color/glance_ink" android:textStyle="bold" android:textSize="12sp" android:letterSpacing="0.06" android:maxLines="1" android:ellipsize="end" />
+            <TextView android:id="@+id/header_weather" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8dp" android:textColor="@color/glance_muted" android:textSize="12sp" android:maxLines="1" android:visibility="gone" />
+            <TextView android:id="@+id/header_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/glance_muted" android:textSize="12sp" android:maxLines="1" />
+            <!-- Negative margins give the small icon a finger-sized target without growing the row. -->
+            <ImageView android:id="@+id/header_refresh" android:layout_width="30dp" android:layout_height="28dp" android:layout_marginStart="2dp" android:layout_marginEnd="-6dp" android:paddingLeft="8dp" android:paddingRight="6dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:src="@drawable/ic_refresh" android:contentDescription="Refresh" />
+            <!-- While a tapped refresh runs: the seconds it should still take. -->
+            <TextView android:id="@+id/header_refresh_count" android:layout_width="30dp" android:layout_height="28dp" android:layout_marginStart="2dp" android:layout_marginEnd="-6dp" android:paddingLeft="8dp" android:paddingRight="6dp" android:gravity="center" android:includeFontPadding="false" android:fontFamily="sans-serif-medium" android:textSize="13sp" android:textColor="@color/glance_ink" android:maxLines="1" android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    </LinearLayout>
+</FrameLayout>

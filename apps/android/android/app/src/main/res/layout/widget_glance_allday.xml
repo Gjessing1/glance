@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Today's all-day events: the first title and a "+N more" chip right after it, the calendar at the end. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/allday_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="3dp">
+    <ImageView android:layout_width="14dp" android:layout_height="14dp" android:layout_marginEnd="8dp" android:src="@drawable/ic_calendar" android:importantForAccessibility="no" />
+    <!-- The frame hands its row an upper bound only, so the chip follows a short title and a long one shrinks to make room for it. -->
+    <FrameLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/allday_text" android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/glance_ink" android:maxLines="1" android:ellipsize="end" />
+            <TextView android:id="@+id/allday_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:background="@drawable/allday_more" android:paddingStart="7dp" android:paddingEnd="7dp" android:paddingTop="1dp" android:paddingBottom="1dp" android:fontFamily="sans-serif-medium" android:textSize="11sp" android:textColor="@color/glance_link" android:maxLines="1" android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+    <TextView android:id="@+id/allday_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:textSize="10sp" android:textColor="@color/glance_muted" android:maxLines="1" />
+</LinearLayout>

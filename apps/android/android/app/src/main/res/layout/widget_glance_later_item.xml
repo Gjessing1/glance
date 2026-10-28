@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One later connection: its first vehicle's line chip and the time it leaves. Tapping opens that ride's journey sheet. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/later_item" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+    <LinearLayout android:id="@+id/line_badge" android:layout_width="wrap_content" android:layout_height="18dp" android:minWidth="26dp" android:gravity="center" android:orientation="horizontal" android:paddingLeft="4dp" android:paddingRight="4dp" android:background="@drawable/badge_bus">
+        <ImageView android:id="@+id/mode_icon" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" android:importantForAccessibility="no" />
+        <TextView android:id="@+id/line_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="11sp" android:maxLines="1" />
+    </LinearLayout>
+    <TextView android:id="@+id/later_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:fontFeatureSettings="tnum" android:fontFamily="sans-serif-medium" android:textSize="12sp" android:textColor="@color/glance_ink" android:maxLines="1" />
+</LinearLayout>

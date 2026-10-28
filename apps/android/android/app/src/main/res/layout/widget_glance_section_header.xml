@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A section's title row: icon, title, a right-hand label, the agenda's page arrows, and an optional action or refresh button.
+     It reaches over the card's top and right padding (and 8dp into the rows) so its buttons get finger-sized hit areas without
+     making the card taller. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/section_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-8dp" android:layout_marginBottom="-8dp" android:layout_marginEnd="-12dp" android:paddingTop="8dp" android:paddingBottom="8dp" android:clipToPadding="false" android:gravity="center_vertical" android:orientation="horizontal">
+    <ImageView android:id="@+id/section_icon" android:layout_width="16dp" android:layout_height="16dp" android:importantForAccessibility="no" />
+    <TextView android:id="@+id/section_title" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="7dp" android:textStyle="bold" android:textSize="15sp" android:textColor="@color/glance_ink" android:maxLines="1" android:ellipsize="end" />
+    <TextView android:id="@+id/section_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:layout_marginEnd="12dp" android:textSize="11sp" android:textColor="@color/glance_muted" android:maxLines="1" />
+    <!-- Round page buttons: 24dp circles in hit areas that reach into the row's padding but stay inside the row, so the
+         circles are never clipped. -->
+    <LinearLayout android:id="@+id/section_pager" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-6dp" android:layout_marginBottom="-6dp" android:layout_marginEnd="6dp" android:orientation="horizontal" android:visibility="gone">
+        <FrameLayout android:id="@+id/section_prev" android:layout_width="36dp" android:layout_height="32dp" android:contentDescription="Earlier events">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_gravity="center" android:padding="5dp" android:background="@drawable/pager_button" android:src="@drawable/ic_chevron_left" android:importantForAccessibility="no" />
+        </FrameLayout>
+        <FrameLayout android:id="@+id/section_next" android:layout_width="36dp" android:layout_height="32dp" android:contentDescription="Later events">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_gravity="center" android:padding="5dp" android:background="@drawable/pager_button" android:src="@drawable/ic_chevron_right" android:importantForAccessibility="no" />
+        </FrameLayout>
+    </LinearLayout>
+    <ImageView android:id="@+id/section_action" android:layout_width="56dp" android:layout_height="36dp" android:layout_marginTop="-8dp" android:layout_marginBottom="-8dp" android:layout_marginStart="-26dp" android:paddingLeft="22dp" android:paddingRight="10dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:visibility="gone" />
+    <ImageView android:id="@+id/section_refresh" android:layout_width="48dp" android:layout_height="36dp" android:layout_marginTop="-8dp" android:layout_marginBottom="-8dp" android:layout_marginStart="-20dp" android:paddingLeft="22dp" android:paddingRight="10dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:src="@drawable/ic_refresh" android:contentDescription="Refresh" android:visibility="gone" />
+    <!-- While a tapped refresh runs: the seconds it should still take. -->
+    <TextView android:id="@+id/section_refresh_count" android:layout_width="48dp" android:layout_height="36dp" android:layout_marginTop="-8dp" android:layout_marginBottom="-8dp" android:layout_marginStart="-20dp" android:paddingLeft="22dp" android:paddingRight="10dp" android:gravity="center" android:includeFontPadding="false" android:fontFamily="sans-serif-medium" android:textSize="13sp" android:textColor="@color/glance_ink" android:maxLines="1" android:visibility="gone" />
+</LinearLayout>

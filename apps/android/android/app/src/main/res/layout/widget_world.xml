@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tiny Living World in one cell, still: a square picture centred in the cell, as One UI centres the app icons and folders beside it. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tree_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/tree_frame_a" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:importantForAccessibility="no" />
+</FrameLayout>

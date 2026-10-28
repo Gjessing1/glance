@@ -1,0 +1,58 @@
+# --- Personal planning docs (kept local, not committed) ---
+# Same convention as every other project on this host: agent instructions and
+# planning docs never go to the forge. Never remove these entries.
+# Exception: ROADMAP.md IS tracked — its history (what was planned, when it
+# shipped or was dropped) has proven useful. `docs/*` rather than `docs/`, because
+# git cannot re-include a file inside an ignored directory.
+CLAUDE.md
+AGENTS.md
+docs/*
+!docs/ROADMAP.md
+.claude/
+
+# --- Dependencies ---
+node_modules/
+.npm/
+
+# --- Build output ---
+dist/
+build/
+*.tsbuildinfo
+# Built web app copied here for production-shaped local runs (see the verify skill).
+backend/public/
+
+# --- Env & secrets ---
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+keystore.env
+
+# --- Local data ---
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# android:begin
+# --- Android (apps/android/android/.gitignore covers the Gradle side) ---
+*.apk
+*.aab
+# android:end
+
+# --- Logs / misc ---
+*.log
+npm-debug.log*
+.DS_Store
+coverage/
+.vite/
+test-results/
+playwright-report/
+
+# Local release bundles and design references
+releases/
+temp-readme.md
+/bird example.png
+/entur 1 overview.jpg
+/entur 2 details.jpg

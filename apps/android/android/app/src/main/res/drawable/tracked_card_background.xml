@@ -1,0 +1,2 @@
+<!-- A Smart Glance card holding a tracked journey: the card's own fill, ringed in green. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"><solid android:color="@color/glance_card"/><stroke android:width="2dp" android:color="@color/glance_ok"/><corners android:radius="14dp"/></shape>

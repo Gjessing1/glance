@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One agenda event: start and countdown, the calendar's colour bar, title and meta, and a join or map action. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/event_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="-6dp" android:layout_marginEnd="-6dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="6dp" android:paddingEnd="6dp" android:paddingTop="5dp" android:paddingBottom="5dp">
+    <LinearLayout android:layout_width="54dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:id="@+id/event_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFeatureSettings="tnum" android:fontFamily="sans-serif-medium" android:textStyle="bold" android:textSize="15sp" android:textColor="@color/glance_ink" android:maxLines="1" />
+        <TextView android:id="@+id/event_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="@color/glance_muted" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+    <ImageView android:id="@+id/event_bar" android:layout_width="3dp" android:layout_height="34dp" android:layout_marginStart="2dp" android:layout_marginEnd="10dp" android:scaleType="fitXY" android:src="@drawable/calendar_bar" android:importantForAccessibility="no" />
+    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:id="@+id/event_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="15sp" android:textColor="@color/glance_ink" android:maxLines="1" android:ellipsize="end" />
+        <TextView android:id="@+id/event_meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:textSize="11sp" android:textColor="@color/glance_muted" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+    <ImageView android:id="@+id/event_action" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="-6dp" android:padding="8dp" android:visibility="gone" />
+</LinearLayout>

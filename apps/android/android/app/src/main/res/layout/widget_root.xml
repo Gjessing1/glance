@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="10dp" android:background="@drawable/widget_background">
+    <!-- Only shown before the first board or when no group is enabled; otherwise refresh sits in the first card's title row. -->
+    <LinearLayout android:id="@+id/widget_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingStart="4dp" android:paddingTop="6dp">
+        <TextView android:id="@+id/widget_status" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Loading departures…" android:textColor="@color/glance_muted" android:textSize="11sp" android:maxLines="1" android:ellipsize="end" />
+        <ImageView android:id="@+id/refresh" android:layout_width="32dp" android:layout_height="26dp" android:padding="4dp" android:src="@drawable/ic_refresh" android:contentDescription="Refresh departures" />
+        <!-- While a tapped refresh runs: the seconds it should still take. -->
+        <TextView android:id="@+id/refresh_count" android:layout_width="32dp" android:layout_height="26dp" android:paddingLeft="4dp" android:paddingRight="4dp" android:gravity="center" android:includeFontPadding="false" android:fontFamily="sans-serif-medium" android:textSize="13sp" android:textColor="@color/glance_ink" android:maxLines="1" android:visibility="gone" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/groups" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+</LinearLayout>

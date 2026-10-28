@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:orientation="vertical" android:paddingLeft="6dp" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:background="@drawable/group_background">
+    <LinearLayout android:id="@+id/rows" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    <TextView android:id="@+id/card_empty" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="6dp" android:textColor="@color/glance_muted" android:textSize="12sp" android:visibility="gone" />
+    <TextView android:id="@+id/card_notice" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingLeft="6dp" android:paddingRight="6dp" android:paddingBottom="2dp" android:textColor="@color/glance_warn" android:textSize="11sp" android:maxLines="1" android:ellipsize="end" android:visibility="gone" />
+</LinearLayout>

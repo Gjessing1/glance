@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The unit after the hourly strip's rain row: widget_glance_hour's rows, empty but for "mm", so it sits on the amounts' line. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="2dp" android:gravity="center_horizontal" android:orientation="vertical" android:contentDescription="Precipitation in millimetres">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:importantForAccessibility="no" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="15sp" android:importantForAccessibility="no" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:importantForAccessibility="no" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="mm" android:textSize="10sp" android:textColor="@color/glance_muted" android:importantForAccessibility="no" />
+</LinearLayout>

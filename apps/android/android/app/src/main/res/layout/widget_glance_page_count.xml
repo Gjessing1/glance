@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The agenda's page count ("2 of 8") in the dots' place, when there are more pages than dots stay countable for. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/page_count" android:layout_width="wrap_content" android:layout_height="16dp" android:gravity="center" android:includeFontPadding="false" android:textSize="11sp" android:textColor="@color/glance_muted" android:maxLines="1" />

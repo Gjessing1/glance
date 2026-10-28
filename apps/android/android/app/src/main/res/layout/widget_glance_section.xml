@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A section card: the title row (widget_glance_section_header), then the section's rows. The card does not clip to its
+     padding, because the title row reaches into it. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/section_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:clipToPadding="false" android:orientation="vertical" android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp" android:background="@drawable/group_background">
+    <include layout="@layout/widget_glance_section_header" />
+    <LinearLayout android:id="@+id/section_body" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+</LinearLayout>
