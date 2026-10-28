@@ -1,6 +1,6 @@
 # Shared by the APK release (build-android-release.sh) and the web-only release (android-ota.sh).
 # Homepage serves these fixed names; Caddy exempts exactly them from SSO so the app can reach them.
-downloads=/home/gjessing/docker/homepage/downloads
+downloads=/home/gjessing/docker/Infrastructure/homepage/downloads
 public=https://home.gjessing.io/downloads
 gradle=apps/android/android/app/build.gradle
 version="$(sed -nE 's/^[[:space:]]*versionName[[:space:]]+"([^"]+)"[[:space:]]*$/\1/p' "$gradle")"
