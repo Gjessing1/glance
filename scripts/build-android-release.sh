@@ -23,7 +23,7 @@ if [ -d "$downloads" ]; then
   write_manifest "releases/glance-$version.apk"
   # Cloudflare overrides browser caching of .apk to hours, so a fixed URL can hand out an old
   # release; the version query makes each release a new URL for browsers and the edge alike.
-  services=/home/gjessing/docker/Infrastructure/homepage/config/services.yaml
+  services=/home/gjessing/docker/infrastructure/homepage/config/services.yaml
   sed -i -E "s#(href: https://home\.gjessing\.io/downloads/glance-latest\.apk)(\?v=[0-9]+)?\$#\1?v=$code#" "$services"
   printf 'Published %s (%s) as %s\n' "$version" "$code" "$downloads/glance-latest.apk"
 fi
